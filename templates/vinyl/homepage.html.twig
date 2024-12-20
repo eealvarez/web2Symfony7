@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}
+
+	Crear un nuevo registro |
+	{{ parent() }}
+
+{% endblock %}
+
+{% block body %}
+
+	<h1>{{ title }}</h1>
+
+	{# Comentario interno #}
+
+	<div>
+		Tracks:
+
+		<ul>
+
+			{% for track in tracks %}
+				<li>
+					{{ track.song }}
+					-
+					{{ track.artist|upper }}
+				</li>
+			{% endfor %}
+
+		</ul>
+	</div>
+
+	{{ '2024' }}
+
+{% endblock %}
